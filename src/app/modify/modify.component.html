@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Modification Contact</h3>
+    </div>
+    <div class="panel-body">
+    <form #f="ngForm" (ngSubmit)="onMofify(f.value)">
+            <div>
+                    <label class="control-label">
+                        Nom: </label> <input type="text" name="nom" [(ngModel)]="currentContact.nom" class="form-control">
+                </div>
+                <div>
+                    <label class="control-label">
+                        Adresse: </label> <input type="text" name="adresse" [(ngModel)]="currentContact.adresse" class="form-control">
+                </div>
+                <div>
+                    <label class="control-label">
+                        Email: </label> <input type="email" name="email" [(ngModel)]="currentContact.email" class="form-control">
+                </div>
+                <div>
+                    <label class="control-label">
+                        Phone: </label> <input type="tel" name="telephone" [(ngModel)]="currentContact.telephone" class="form-control">
+                </div>
+                <div>
+                    <label class="control-label">
+                        Photo: </label> <input type="file" name="photo" (change)="onSelectedFiles($event)" [(ngModel)]="currentContact.photo"
+                        class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Modifier</button>
+    </form>
+    </div>
+</div>
